@@ -1,0 +1,18 @@
+def my_decorator(func):
+    def wrapper(a,b):
+        print("Before the function call")
+        func(a,b)  # Call the original function with its arguments
+        print("After the function call")
+        # return result
+    return wrapper
+
+# Applying the decorator
+@my_decorator
+def say_hello(a, b):
+    print(f"Hello, {a} and {b}!")
+
+# Calling the decorated function
+say_hello("Alice", "Bob")
+
+
+
